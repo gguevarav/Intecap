@@ -1,0 +1,20 @@
+div{
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	-webkit-animation-name: example;
+	-webkit-animation-duration: 4s;
+	animation-name: example;
+	animation-duration: 4s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example{
+	from {background-color: red;}
+		to {background-color: yellow;}
+}
+
+@keyframes example{
+	from {background-color: red;}
+		to {background-color: yellow;}
+}

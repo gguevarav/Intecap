@@ -1,0 +1,41 @@
+body{
+	text-align: center;
+	/*background-image: url("https://images.vexels.com/media/users/3/148171/isolated/preview/b4ad26cf6cc8ad39b0923cf65e1ea540-vector-de-fondo-rect--ngulo-abstracto-by-vexels.png");*/
+	/*background-repeat: no-repeat;*/
+	background-color: #78cdd7;
+}
+.Menu{
+	background-color: #44a1a0;
+}
+ul {
+  list-style-type: none;
+}
+li {
+  display: inline;
+}
+.Menu a {
+  padding: 100px;
+}
+.Titulo{
+	background-color: #44a1a0;
+}
+h1{
+	text-align: center;
+}
+img{
+	width: 300px;
+	height: 300px;
+}
+footer{
+	text-align: center;
+}
+a:hover{
+	font-size:  20px;
+	color: #fffffa;
+}
+.Opinion1{
+	columns: 2;
+}
+.Opinion2{
+	columns: 2;
+}

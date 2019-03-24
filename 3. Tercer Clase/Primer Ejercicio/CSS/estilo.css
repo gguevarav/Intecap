@@ -1,0 +1,38 @@
+body{
+	text-align: justify;
+}
+h1{
+	color: black;
+}
+.fondo{
+	background-image: url("https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png");
+}
+.fondo2{
+	background-color: blue;
+}
+.fondo2 h1{
+	color: white;
+}
+.fondo2 h2{
+	color: red;
+}
+p, h2{
+	font: oblique bold 120% cursive;
+}
+.texto{
+	color: #67AB36;
+	font-size: 50px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.fondoimg{
+	background-image: linear-gradient(blue, yellow, green);
+	padding: 6px 6px 6px 6px;
+}
+.margentexto{
+	background-image: linear-gradient(green, yellow, blue);
+	padding: 4px 4px 4px 4px;
+	color: #ffffff;
+}
+.Contenedor{
+	columns: 2;
+}

@@ -1,0 +1,79 @@
+body{
+	font-family: Arial;		/*Tipo de letra*/
+}
+#lista1{
+	font-family: Arial;		/*Tipo de letra*/
+	font-weight: bold;		/*Estilo de Letra*/
+	font-size: 15px;		/*Tamañp de letra*/
+	text-align: center;		/*Alineación del texto*/
+	background-color: black;/*Color de Fondo*/
+	padding-top: 15px;		/*Margen interno Superior*/
+	padding-bottom: 15px;	/*Margen interno Inferior*/
+}
+
+.separador{
+	color: gray;			/*Color de la linea*/
+}
+
+#lista1 li{
+	display: inline; 		/*Alineación de elementos*/
+	padding-left: 3px;		/*Margen interno izquierdo*/
+	padding-right: 3px;		/*Margen interno derecho*/
+}
+
+a:link{						/*Link: es el estilo que se aplica al hipervínculo antes de ser activado*/
+	color: white;			/*Color de letra*/
+	text-decoration: none;	/*por si existe algún estilo por defecto lo quitamos*/
+}
+
+a:hover{					/*HOVER: estilo al pasar el mouse sobre el hipervínculo*/;
+	color: black;
+	background-color: lightgray;
+}
+
+a:visited{					/*VISITED: es el estilo que se aplica al hipervinculo después de ser activado*/
+	color: #fff;
+}
+
+.contenedor{
+	margin-left: 10%;		/*margen izquierdo*/
+	width: 80%;				/*ancho*/
+	height: 100%;			/*ancho*/
+}
+
+section #producto{
+	width: 100%;
+	height: 800px;
+}
+
+#inicio{
+	background-color: white;
+}
+
+#producto{
+	background-color: white;
+}
+
+.ir-arriba{
+	padding: 10px;			/*Margen interno*/
+	background-color: #024959;	/*fondo?*/
+	font-size: 20px;
+	color: #fff;
+	cursor: pointer; 		/*Estilo del cursor*/
+	position: fixed; 		/*Posicion*/
+	bottom: 20px;
+	right: 20px;
+}
+
+.Producto1{
+	columns: 2;
+}
+
+.Prod{
+	width: 200px;
+	height: 200px;
+}
+
+.imginicio{
+	width: 100%;
+}

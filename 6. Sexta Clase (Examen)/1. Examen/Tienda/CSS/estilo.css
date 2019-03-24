@@ -1,0 +1,135 @@
+body{
+	font-family: Arial;		
+}
+#lista1{
+	font-family: Arial;		
+	font-weight: bold;		
+	font-size: 15px;		
+	text-align: center;		
+	background-color: black;
+	padding-top: 15px;		
+	padding-bottom: 15px;	
+}
+
+.separador{
+	color: gray;			
+}
+
+#lista1 li{
+	display: inline; 		
+	padding-left: 3px;		
+	padding-right: 3px;		
+}
+
+a:link{						
+	color: white;			
+	text-decoration: none;	
+}
+
+a:hover{					
+	color: black;
+	background-color: lightgray;
+}
+
+a:visited{					
+	color: #fff;
+}
+#Acercade{
+	text-align: justify;
+}
+
+.contenedor{
+	margin-left: 10%;		
+	width: 80%;				
+	height: 100%;			
+}
+
+section #producto{
+	width: 100%;
+	height: 800px;
+}
+
+#inicio{
+	background-color: white;
+}
+
+#producto{
+	background-color: white;
+}
+
+.ir-arriba{
+	padding: 10px;			
+	background-color: #024959;	
+	font-size: 20px;
+	color: #fff;
+	cursor: pointer; 		
+	position: fixed; 		
+	bottom: 20px;
+	right: 20px;
+}
+
+.Producto1{
+	columns: 2;
+}
+
+.Prod{
+	width: 200px;
+	height: 200px;
+}
+
+.ImagenInicio{
+	width: 100%;
+	left: 0px;
+  	top: 0px;
+  	z-index: -1;
+}
+
+.ImgPubli{ 
+	z-index: 1;
+	position: absolute;
+	top: 75px;
+	width: 150px;
+	height: 75px;
+}
+
+.ImgContacto{
+	width: 100%;
+}
+
+.ImagenContacto{
+	-webkit-transform: rotateX(150deg);
+	animation-name: Contacto;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@keyframes Contacto {
+	from {transform: rotateX(180deg);}
+	to {transform: rotateX(360deg);}
+}
+
+.encontrarnos{
+	width: 300px;
+}
+
+.ImgPubli{
+	-webkit-animation-name: example;	
+	-webkit-animation-duration: 5s;		
+	-webkit-animation-iteration-count: 3;
+	animation-iteration-count: infinite;;
+	animation-name: example;
+	animation-duration: 5s;
+	animation-direction: alternate;		
+}
+
+@-webkit-keyframes example{
+	from {left: 10%;}
+	to {left: 80%;}
+}
+
+/* Standar syntax */
+@keyframes example{
+	from {left: 10%;}
+	to {left: 80%
+}

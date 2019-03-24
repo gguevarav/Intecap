@@ -1,0 +1,52 @@
+.ImgOceano{
+	position: absolute;
+	left: 0px;
+  	top: 0px;
+  	z-index: -1;
+}
+
+.Pez{
+	z-index: 1;
+	width: 50px;
+	height: 50px;
+	position: relative;
+	-webkit-animation: mymove 5s infinite;		/* Safari 4.0 - 8.0 */
+	animation: mymove 15s infinite;
+	animation-direction: alternate;
+}
+
+.Pez1{
+	position: relative;
+	top: 150px;
+}
+.Pez2{
+	position: relative;
+	top: 220px;
+}
+
+.Pez3{
+	position: relative;
+	top: 290px;
+}
+
+/* Safari 4.0 - 8.0 */
+.Pez1	{-webkit-animation-timing-function: linear;}
+.Pez2	{-webkit-animation-timing-function: ease;}
+.Pez3	{-webkit-animation-timing-function: ease-in;}
+
+/* Standard syntax */
+.Pez1	{animation-timing-function: linear;}
+.Pez2	{animation-timing-function: ease;}
+.Pez3	{animation-timing-function: ease-in;}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+	from {left: 0px;}
+	to {left: 600px; transform: rotateY(180deg);}
+}
+
+/* Standar syntax */
+@keyframes mymove {
+	from {left: 0px;}
+	to {left: 600px; transform: rotateY(180deg);}
+}

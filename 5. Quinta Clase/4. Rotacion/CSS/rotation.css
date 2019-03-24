@@ -1,0 +1,18 @@
+div{
+	width: 300px;
+	height: 100px;
+	background-color: yellow;
+	border: 1px solid black;
+}
+
+#myDiv {
+	-webkit-transform: rotateX(150deg);
+	animation-name: example;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes example {
+	from {transform: rotateX(180deg);}
+	to {transform: rotateX(360deg);}
+}
