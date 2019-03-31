@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Intecap</title>
+	<link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
+	<script type="text/javascript" src="JS/jquery.js"></script>
+	<script type="text/javascript" src="JS/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<h1 class="display-4">Bienvenido</h1>
+			<p class="lead">Inicia sesión para acceder al sitio.</p>
+			<hr class="my-4">
+			<p>Puedes conocer más acerca de nosotros en el siguiente enlace.</p>
+			<p class="lead">
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Contacto">Contacto</button>
+			</p>
+		</div>
+		<form>
+			<div class="form-group">
+				<label for="Correo">Correo</label>
+				<input type="email" class="form-control" id="correo" aria-describedby="emailHelp" placeholder="Ingrese su correo">
+				<small id="emailHelp" class="form-text text-muted">No compartiremos su dirección con nadie.</small>
+			</div>
+			<div class="form-group">
+				<label for="Contrasena">Contraseña</label>
+				<input type="password" class="form-control" id="Contrasena" placeholder="Contraseña">
+			</div>
+			<div class="form-check">
+				<input type="checkbox" class="form-check-input" id="Recordar">
+				<label class="form-check-label" for="Recordar">Recuérdame</label>
+			</div>
+			<a href="segundo.html" class="btn btn-primary">Iniciar sesión</a>
+		</form>
+		<hr>
+		<footer class="text-justify">
+			<span>
+				<small>Gemis Daniel Guevara Villeda</small>
+			</span>
+			<br>
+			<span>
+				<small>INTECAP 2019</small>
+			</span>
+		</footer>
+	</div>
+	<div class="modal" tabindex="-1" role="dialog" id="Contacto">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Acerca de...</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+					<div class="modal-body">
+						<img src="https://intecap.edu.gt/wp-content/uploads/2017/03/logoazul.png">
+						<p>Calle Doroteo Guamuch Flores 7-51 zona 5</p>
+						<p>callcenter@intecap.edu.gt(502) 2410-5555</p>
+						<p>(502) 2410-5555</p>
+					</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

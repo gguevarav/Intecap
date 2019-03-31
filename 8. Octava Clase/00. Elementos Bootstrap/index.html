@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Elementos Bootstrap</title>
+	<link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
+	<script type="text/javascript" src="JS/jquery.js"></script>
+	<script type="text/javascript" src="JS/bootstrap.min.js"></script>
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</head>
+<body>
+	<div class="container">
+		<div id="slide" class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="IMG/Flash/flash1.png" class="d-block w-100">
+					<div class="carousel-caption d-none d-md-block">
+						<h5>Flash</h5>
+						<p>Serie de Netflix</p>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="IMG/Arrow/arrow1.jpg" class="d-block w-100">
+					<div class="carousel-caption d-none d-md-block">
+						<h5>Arrow</h5>
+						<p>Serie de Netflix</p>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="IMG/Daredevil/daredevil1.png" class="d-block w-100">
+					<div class="carousel-caption d-none d-md-block">
+						<h5>Daredevil</h5>
+						<p>Serie de Netflix</p>
+					</div>
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#slide" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Anterior</span>
+			</a>
+			<a class="carousel-control-next" href="#slide" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Siguiente</span>
+			</a>
+		</div>
+		<br>
+		<div class="card-group">
+			<div class="card">
+				<img src="IMG/Flash/flash2.jpg" class="card-img-top">
+				<div class="card-body">
+					<h5 class="card-tittle">Flash</h5>
+					<p class="card-text">
+						The Flash es una serie de televisión estadounidense desarrollada por Greg Berlanti, Andrew Kreisberg y Geoff Johns para la cadena The CW.
+					</p>
+					<a class="btn btn-dark text-white" data-toggle="modal" data-target="#ejemploModal">Mostrar modal</a>
+				</div>
+			</div>
+			<div class="card">
+				<img src="IMG/Arrow/Arrow2.jpg" class="card-img-top">
+				<div class="card-body">
+					<h5 class="card-tittle">Arrow</h5>
+					<p class="card-text">
+						rrow es una serie de televisión de un vigilante estadounidense desarrollada por los escritores/productores Greg Berlanti, Marc Guggenheim y Andrew Kreisberg.
+					</p>
+					<small class="text-muted">Super héroe</small>
+				</div>
+			</div>
+			<div class="card">
+				<img src="IMG/Daredevil/daredevil2.jpg" class="card-img-top">
+				<div class="card-body">
+					<h5 class="card-tittle">Daredevil</h5>
+					<p class="card-text">
+						Daredevil (Matthew Michael "Matt" Murdock) es un superhéroe ficticio que aparece en los cómics estadounidenses publicados por Marvel Comics. 
+					</p>
+				</div>
+				<div class="card-footer">
+					<small class="text-muted">Super héroe</small>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="accordion" id="acordeonEjemplo">
+			<div class="card">
+				<div class="card-header" id="card1">
+					<h2 class="mb-0">
+						<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+							Flash
+						</button>
+					</h2>
+				</div>
+				<div id="collapse1" class="collapse collapsed" aria-labelledby="card1" data-parent="#acordeonEjemplo">
+					<div class="card-body">
+						El episodio piloto fue dirigido por David Nutter. La historia se basa en el superhéroe de DC Comics, Flash, específicamente en Barry Allen, el segundo individuo en tomar dicha identidad. Se trata además de un spin-off de Arrow, serie de televisión basada en Flecha Verde, por lo cual comparten el mismo universo de ficción.1​2​3​ Fue estrenada el 7 de octubre de 2014.4​ El 21 de octubre de 2014, The CW ordenó una temporada completa de veintitrés episodios.
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" id="card2">
+					<h2 class="mb-0">
+						<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+							Arrow
+						</button>
+					</h2>
+				</div>
+				<div id="collapse2" class="collapse collapsed" aria-labelledby="card2" data-parent="#acordeonEjemplo">
+					<div class="card-body">
+						Está basado en el personaje de DC Comics Green Arrow, un luchador contra el crimen disfrazado creado por Mort Weisinger y George Papp. Se estrenó el 10 de octubre de 2012 en Estados Unidos en el canal de televisión The CW, con transmisión internacional a finales de 2012. Principalmente filmada en Vancouver (Columbia Británica, Canadá), la serie sigue al multimillonario playboy Oliver Queen (Stephen Amell), quien, cinco años después de estar varado en una isla hostil, regresa a casa para luchar contra el crimen y la corrupción como un vigilante secreto cuya arma de elección es un arco y flechas. 
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" id="card3">
+					<h2 class="mb-0">
+						<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
+							Daredevil
+						</button>
+					</h2>
+				</div>
+				<div id="collapse3" class="collapse collapsed" aria-labelledby="card3" data-parent="#acordeonEjemplo">
+					<div class="card-body">
+						Daredevil fue creado por el escritor y editor Stan Lee y el artista Bill Everett, con una cantidad no especificada de aportes de Jack Kirby. El personaje apareció por primera vez en Daredevil #1 (abril de 1964). La influencia del escritor y artista Frank Miller en el título a principios de la década de 1980 consolidó al personaje como una parte popular e influyente del Universo Marvel. Daredevil es comúnmente conocido por apodos como "El hombre sin miedo" y el "Diablo de Hell's Kitchen". 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="ejemploModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-tittle" id="modalLabel">Flash</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body text-justify">
+					<p>The Flash es una serie de televisión estadounidense desarrollada por Greg Berlanti, Andrew Kreisberg y Geoff Johns para la cadena The CW. El episodio piloto fue dirigido por David Nutter.</p>
+
+					<p>La historia se basa en el superhéroe de DC Comics, Flash, específicamente en Barry Allen, el segundo individuo en tomar dicha identidad. Se trata además de un spin-off de Arrow, serie de televisión basada en Flecha Verde, por lo cual comparten el mismo universo de ficción.1​2​3​ Fue estrenada el 7 de octubre de 2014.</p>
+
+					<p>El 21 de octubre de 2014, The CW ordenó una temporada completa de veintitrés episodios.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
