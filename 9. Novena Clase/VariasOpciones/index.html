@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
+	<script type="text/javascript" src="JS/jquery.js"></script>
+	<script type="text/javascript" src="JS/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<h1>Calculadora</h1>
+		</div>
+		<form>
+			<div class="form-group">
+				<span>
+					<label id="Num1">
+						Ingrese el primer número: 
+						<input type="number" name="Numero1" id="Numero1" placeholder="Ingresa el primer número">
+					</label>
+				</span>
+			</div>
+			<div class="form-group datos">
+				<span>
+					<label id="Num2">
+						Ingrese el segundo número: 
+						<input type="number" name="Numero2" id="Numero2" placeholder="Ingresa el segundo número">
+					</label>
+				</span>
+			</div>
+			<div class="form-group">
+				<label>Tipo de Operacion:</label>
+			</div>
+			<div class="form-group">
+				<select id="TipoOperacion" onChange="Calcular()">
+					<option value="Suma">Suma</option>
+					<option value="Resta">Resta</option>
+					<option value="Multiplicacion">Multiplicación</option>
+					<option value="Division">División</option>
+					<option value="NegPos">Negativo-Positivo</option>
+					<option value="MayorMenor">Mayor-Menor</option>
+				</select>
+			</div>
+		</form>
+	</div>
+	<script type="text/javascript">
+			// Función para sumar
+			function Calcular(){
+				// Declaración de variables, hay que convertir los valores a enteró para poder sumar
+				var Numero1 = parseInt(document.getElementById('Numero1').value);
+				var Numero2 = parseInt(document.getElementById('Numero2').value);
+				var TipoOperacion = document.getElementById('TipoOperacion').value;
+
+				// Obtenemos la función que queremos hacer
+				switch(TipoOperacion){
+					case 'Suma':{
+						//  Realizamos la suma
+						var Resultado = Numero1 + Numero2;
+						// Mostramos el resultado en un alert
+						MostrarResultado(Resultado);
+						break;
+						}
+					case 'Resta':{
+						//  Realizamos la suma
+						var Resultado = Numero1 - Numero2;
+						// Mostramos el resultado en un alert
+						MostrarResultado(Resultado);
+						break;
+						}
+					case 'Multiplicacion':{
+						//  Realizamos la suma
+						var Resultado = Numero1 * Numero2;
+						// Mostramos el resultado en un alert
+						MostrarResultado(Resultado);
+						break;
+						}
+					case 'Division':{
+						//  Realizamos la suma
+						var Resultado = Numero1 / Numero2;
+						// Mostramos el resultado en un alert
+						MostrarResultado(Resultado);
+						break;
+						}
+					case 'NegPos':{
+						document.getElementById('datos').visibility = "hidden";
+						if(Numero1 > 0){
+							MostrarResultado("El número es positivo");
+							break;
+						}else if(Numero1 < 0){
+							MostrarResultado("El número es Negativo");
+							break;
+						}
+						}
+					case 'MayorMenor':{
+						if(Numero1 > Numero2){
+							MostrarResultado("El número 1 es mayor a numero 2");
+							break;
+						}
+						else{
+							MostrarResultado("El número 2 es mayor a numero 1");
+							break;
+						}
+					}
+				}
+			}
+		// Funcion Mostrar Resultado
+		function MostrarResultado(Resultado){
+			alert(Resultado);
+		}
+	</script>
+</body>
+</html>

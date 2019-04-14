@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
+	<script type="text/javascript" src="JS/jquery.js"></script>
+	<script type="text/javascript" src="JS/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<!--
+		<label>
+			Nombre: 
+			<input type="txt" name="nombre" id="nombre" placeholder="Ingresa tu nombre">
+		</label>
+
+		<button id="boton" onclick="mensaje()">Mostrar</button>
+		<h1 id="mensaje"></h1>
+		-->
+
+		<div class="jumbotron">
+			<h1>Calculadora</h1>
+		</div>
+		
+		<form>
+			<div class="form-group">
+				<span>
+					<label>
+						Numero 1: 
+						<input type="number" name="Numero1" id="Numero1" placeholder="Ingresa el primer número">
+					</label>
+				</span>
+			</div>
+			<div class="form-group">
+				<span>
+					<label>
+						Numero 2: 
+						<input type="number" name="Numero2" id="Numero2" placeholder="Ingresa el segundo número">
+					</label>
+				</span>
+			</div>
+			<!--
+			<button id="botonSuma" onclick="Calcular('Suma')">Sumar</button>
+			<button id="botonResta" onclick="Calcular('Resta')">Resta</button>
+			<button id="botonMulti" onclick="Calcular('Multiplicacion')">Multiplicacion</button>
+			<button id="botonDiv" onclick="Calcular('Division')">Division</button>
+			<h1 id="Resultado"></h1>
+			-->
+			<div class="form-group">
+				<label>Tipo de Operacion:</label>
+			</div>
+			<div class="form-group">
+				<select id="TipoOperacion">
+					<option value="Suma">Suma</option>
+					<option value="Resta">Resta</option>
+					<option value="Multiplicacion">Multiplicación</option>
+					<option value="Division">División</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<span>
+					<button class="btn btn-primary" id="Respuesta" onclick="Calcular()">Mostrar respuesta</button>
+				</span>
+			</div>
+		</form>
+
+	</div>
+	<script type="text/javascript">
+			// document.write(Date());
+			// Incialización de una variable
+			var Numero1 = 0;
+			var Numero2 = 0;
+			var Resultado = 0;
+			
+			Numero1 = 35;
+			Numero2 = 45;
+			/*
+			Resultado = Numero1 + Numero2;
+
+			document.write(Resultado);
+			*/
+
+			/*if (Numero1 > Numero2) {
+				alert("El numero 1 es mayor que el numero 2");
+			}else{
+				alert("El numero 2 es mayor que el numero 1");
+			}*/
+
+			// declaración de una función
+			function mensaje(){
+				// Var sirve para declarar una variable
+				// document.getElementById obtiene el contenido de un elemento por id
+				// .Value obtiene el valor de ese elemento
+				var nombre = document.getElementById('nombre').value;
+				// .innerHTML reemplaza el valor de un elemento
+				document.getElementById('mensaje').innerHTML = nombre;
+				// .Style.atributo = aplica un estilo css a un elemento
+				document.getElementById('mensaje').style.color = "red";
+			}
+
+			// Función para sumar
+			function Calcular(){
+				// Declaración de variables, hay que convertir los valores a enteró para poder sumar
+				var Numero1 = parseInt(document.getElementById('Numero1').value);
+				var Numero2 = parseInt(document.getElementById('Numero2').value);
+				var TipoOperacion = document.getElementById('TipoOperacion').value;
+
+				// Obtenemos la función que queremos hacer
+				switch(TipoOperacion){
+					case 'Suma':{
+						//  Realizamos la suma
+						var Resultado = Numero1 + Numero2;
+					// Mostramos el resultado en un alert
+					MostrarResultado(Resultado);
+					break;
+				}
+				case 'Resta':{
+						//  Realizamos la suma
+						var Resultado = Numero1 - Numero2;
+					// Mostramos el resultado en un alert
+					MostrarResultado(Resultado);
+					break;
+				}
+				case 'Multiplicacion':{
+						//  Realizamos la suma
+						var Resultado = Numero1 * Numero2;
+					// Mostramos el resultado en un alert
+					MostrarResultado(Resultado);
+					break;
+				}
+				case 'Division':{
+						//  Realizamos la suma
+						var Resultado = Numero1 / Numero2;
+					// Mostramos el resultado en un alert
+					MostrarResultado(Resultado);
+					break;
+				}
+			}
+		}
+		// Funcion Mostrar Resultado
+		function MostrarResultado(Resultado){
+			alert(Resultado);
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Numero Positivo o Negativo</title>
+	<link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
+	<script type="text/javascript" src="JS/jquery.js"></script>
+	<script type="text/javascript" src="JS/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<h1>Numero positivo o Negativo</h1>
+		</div>
+		
+		<form>
+			<div class="form-group">
+				<span>
+					<label for="NumeroEvaluar">
+						Número a evaluar: 
+						<input type="number" class="form-control" name="NumeroEvaluar" id="NumeroEvaluar" placeholder="Ingresa el Número" >
+					</label>
+				</span>
+			</div>
+			<div class="form-group">
+				<span>
+					<button class="btn btn-primary" id="Respuesta" onclick="Evaluar()">Evaluar</button>
+				</span>
+			</div>
+		</form>
+
+	</div>
+	<script type="text/javascript">
+			// Función para evaluar
+			function Evaluar(){
+				// Declaración de variables, hay que convertir los valores a enteró para poder usarlos como enteros
+				var NumeroEvaluar = parseInt(document.getElementById('NumeroEvaluar').value);
+				if(NumeroEvaluar > 0){
+					MostrarResultado("El número es positivo");
+				}else if(NumeroEvaluar < 0){
+					MostrarResultado("El número es Negativo");
+				}
+		}
+		// Funcion Mostrar Resultado
+		function MostrarResultado(Resultado){
+			alert(Resultado);
+		}
+	</script>
+</body>
+</html>
