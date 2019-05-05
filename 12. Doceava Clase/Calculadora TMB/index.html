@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TMB - ANDEGUAT</title>
+	<link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
+	<script type="text/javascript" src="JS/jquery.js"></script>
+	<script type="text/javascript" src="JS/bootstrap.min.js"></script>
+	<script type="text/javascript" src="JS/FileSaver.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<h3>Calculadora de TMB y Calorías por día</h3>
+		</div>
+		<div class="card">
+			<div class="card-header">
+    			Ingrese los datos solicitados
+  			</div>
+			<div class="card-body">
+				<form>
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="form-group">
+								<span>
+									<label id="lblNombre">
+										Ingrese su nombre
+									</label>
+									<input type="text" name="txtNombre" class="form-control" id="txtNombre" placeholder="Ingrese su Nombre" required>
+								</span>
+							</div>
+						</div>
+						<div class="col-lg-12">
+							<div class="form-group">
+								<span>
+									<label id="lblPeso">
+										Ingrese su peso
+									</label>
+									<input type="text" name="txtPeso" class="form-control" id="txtPeso" placeholder="Ingrese su peso" required>
+								</span>
+							</div>
+						</div>
+						<div class="col-lg-12">
+							<div class="form-group">
+								<span>
+									<label id="lblAltura">
+										Ingrese su altura
+									</label>
+									<input type="text" name="txtAltura" class="form-control" id="txtAltura" placeholder="Ingrese su Altura" required>
+								</span>
+							</div>
+						</div>
+						<div class="col-lg-12">
+							<div class="form-group">
+								<span>
+									<label id="lblEdad">
+										Ingrese su edad
+									</label>
+									<input type="text" name="txtEdad" class="form-control" id="txtEdad" placeholder="Ingrese su edad" required>
+								</span>
+							</div>
+						</div>
+						<div class="col-lg-12">
+							<div class="form-group">
+								<label>Género</label>
+								<select id="slcGenero" class="form-control" required>
+									<option value="Masculino">Masculino</option>
+									<option value="Femenino">Femenino</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-lg-12">
+							<div class="form-group">
+								<label>Cantidad de ejercicio</label>
+								<select id="slcEjercicio" class="form-control" required>
+									<option value="Sedentaria">Sedentaria</option>
+									<option value="LigeramenteActiva">Ligerament eActiva</option>
+									<option value="ModeradamenteActiva">Moderadamente Activa</option>
+									<option value="MuyActiva">Muy Activa</option>
+									<option value="Extremadamente">Extremadamente</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-lg-12">
+							<div class="form-group">
+								<a href="#" class="btn btn-primary" id="CalcularDatos" onclick="ValidarDatos('Calcular')">Calcular</a>
+								<a href="#" class="btn btn-success" id="DescargarInfo" onclick="ValidarDatos('Descargar')">Descargar Información</a>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		// Variables Globales
+		var TMB = 0;
+		var Calorias = 0;
+
+		function ValidarDatos(Operacion){
+			//var Peso = PesoEnLibras / 2.205;
+			var Nombre = document.getElementById('txtNombre').value;
+			var Altura = document.getElementById('txtAltura').value;
+			var Peso = document.getElementById('txtPeso').value;
+			var Edad = document.getElementById('txtEdad').value;
+			var Genero = document.getElementById('slcGenero').value;
+			var Ejercicio = document.getElementById('slcEjercicio').value;
+
+			if(Nombre == "" || Peso == "" || Altura == "" || Edad == "" || Genero == "" || Ejercicio == ""){
+				alert("Debe completar todos los campos");
+			}
+			else{
+				if(Altura < 3){
+					Altura = Altura * 100;
+				}
+				switch(Operacion){
+					case 'Calcular':{
+						alert(Calcular());
+						break;
+					}
+					case 'Descargar':{
+						DescargarInfo();
+						break;
+					}
+				}
+			}
+		}
+
+		// Calcular 
+		function Calcular(){
+			// Declaración de variables
+			var PesoEnLibras = parseInt(document.getElementById('txtPeso').value);
+			var Peso = PesoEnLibras / 2.205;
+			var Altura = parseInt(document.getElementById('txtAltura').value);
+			var Edad = parseInt(document.getElementById('txtEdad').value);
+			var Genero = document.getElementById('slcGenero').value;
+			var Ejercicio = document.getElementById('slcEjercicio').value;
+
+			switch (Genero){
+				case 'Masculino':{
+					// Realizamos el cálculo
+					TMB = (((10 * Peso) + (6.25 * Altura)) - (5 * Edad)) + 5;
+					Calorias = CalcularCalorías(TMB, ObtenerValorCalorias(Ejercicio));
+					break;
+				}
+				case 'Femenino':{
+					TMB = (((10 * Peso) + (6.25 * Altura)) - (5 * Edad)) -161;
+					Calorias = CalcularCalorías(TMB, ObtenerValorCalorias(Ejercicio));
+					break;
+				}
+			}
+			return "TMB: " + TMB + "\r\n" + "Calorias: " + Calorias;
+		}
+		// Obtenemos el valor por la cantidad de ejercicio
+		function ObtenerValorCalorias(Valor){
+			var ValorCalorias = 0;
+			switch(Valor){
+				case 'Sedentaria':{
+					ValorCalorias = 1.2;
+					break;
+				}
+				case 'LigeramenteActiva':{
+					ValorCalorias = 1.375;
+					break;
+				}
+				case 'ModeradamenteActiva':{
+					ValorCalorias = 1.55;
+					break;
+				}
+				case 'MuyActiva':{
+					ValorCalorias = 1.725;
+					break;
+				}
+				case 'Extremadamente':{
+					ValorCalorias = 1.9;
+					break;
+				}
+			}
+			return ValorCalorias;
+		}
+
+		// Cálculo de Calorías
+		function CalcularCalorías(Tasa, Valor){
+			return Tasa * Valor;
+		}
+		// Para descargar los datos
+		function DescargarInfo(){
+			var Nombre = document.getElementById('txtNombre').value;
+			var Info = Calcular();
+			var blob = new Blob([Info], {type: "text/plain;charset=utf-8"});
+	    	saveAs(blob, Nombre + ".txt");
+		}
+	</script>
+</body>
+</html>
