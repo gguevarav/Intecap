@@ -1,4 +1,17 @@
-.Carrusel, .GrupoCartas, .Botonera{
+.Carrusel, .GrupoCartas, .Botonera, .QuienesSomos, .Contacto, .Ubicacion{
 	margin-top: 25px;
 }
 
+.Grupo2, .Grupo3, .Grupo4, .QuienesSomos, .Contacto, .Ubicacion{
+	display:none;
+}
+
+.ir-arriba{
+	padding: 10px;	
+	font-size: 20px;
+	color: #fff;
+	cursor: pointer;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+}
