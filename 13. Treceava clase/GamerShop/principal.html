@@ -17,13 +17,12 @@
 	<script src="JS/funciones.js"></script>
 	<!-- Icono de la página -->
 	<link rel="icon" type="image/png" href="IMG/Logo.png" />
-	<!-- Importamos el archivo de modales -->
-	<link rel="import" href="modal.html">
 	<meta charset="utf-8">
 </head>
 <body>
 	<div class="container">
 		<a href="#BarraNavegacion" class="btn-dark ir-arriba"><ion-icon name="arrow-round-up"></ion-icon></i></a>
+		<a href="#BarraNavegacion" class="btn-dark ir-arriba" onclick="MostrarArticulos('Grupo1')"><ion-icon name="arrow-round-up"></ion-icon></i></a>
 		<section id="BarraNavegacion">
 			<nav class="navbar navbar-expand-lg navbar-fixed-top navbar-dark bg-dark main-nav">
 				<div class="container">
@@ -72,7 +71,7 @@
 						<a class="nav-link" href="#Cuerpo" onclick="MostrarArticulos('ListaJuegos')">Lista de Juegos</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#"><ion-icon name="cart"></ion-icon> Ver carrito</a>
+						<a class="nav-link" href="#" data-toggle="modal" data-target="#VerCarrito"><ion-icon name="cart"></ion-icon> Ver carrito</a>
 					</li>
 				</ul>
 			</nav>
@@ -83,16 +82,24 @@
 					<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
 					<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 					<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
 				</ol>
 				<div class="carousel-inner">
 					<div class="carousel-item active">
-						<img class="d-block w-100" src="IMG/arrow/arrow1.jpg" alt="First slide">
+						<img class="d-block w-100" src="IMG/watchdogs/watchdogs1.jpg" alt="First slide">
 					</div>
 					<div class="carousel-item">
-						<img class="d-block w-100" src="IMG/daredevil/daredevil1.jpg" alt="Second slide">
+						<img class="d-block w-100" src="IMG/callofduty/callofduty1.jpg" alt="Second slide">
 					</div>
 					<div class="carousel-item">
-						<img class="d-block w-100" src="IMG/flash/flash1.jpg" alt="Third slide">
+						<img class="d-block w-100" src="IMG/finalfantasy/finalfantasy1.jpg" alt="Third slide">
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="IMG/fifa2019/fifa20191.jpg" alt="Third slide">
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="IMG/gtav/gtav1.jpg" alt="Third slide">
 					</div>
 				</div>
 				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -110,7 +117,7 @@
 				<div class="row">
 					<div class="col-lg-3">
 						<div class="card">
-							<img class="card-img-top" src="IMG/arrow/arrow2.jpg" alt="Card image cap">
+							<img class="card-img-top" src="IMG/watchdogs/watchdogs2.jpg" alt="Watch Dogs">
 							<div class="card-body">
 								<h5 class="card-title">Watch Dogs</h5>
 								<hr>
@@ -125,17 +132,17 @@
 									<ion-icon name="star"></ion-icon>
 								</span>
 								<hr>
-								<a class="btn btn-primary" href="#" onclick="MostrarModal('arrow', 'Watch Dogs', 'Ubisoft', '599.99')">Agregar al carrito</a>
+								<a class="btn btn-primary" href="#" onclick="MostrarModal('watchdogs', 'Watch Dogs', 'Ubisoft', '599.99')">Agregar al carrito</a>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-3">
 						<div class="card">
-							<img class="card-img-top" src="IMG/daredevil/daredevil2.jpg" alt="Card image cap">
+							<img class="card-img-top" src="IMG/callofduty/callofduty2.jpg" alt="Call of Duty">
 							<div class="card-body">
-								<h5 class="card-title">Watch Dogs</h5>
+								<h5 class="card-title">Call of Duty</h5>
 								<hr>
-								<small class="card-text">by Ubisoft</small>
+								<small class="card-text">by Treyarch</small>
 								<h4 class="card-text PrecioArticulo" id="PrecioArticulo">Q. 599.99</h4>
 								<p class="card-text">5% de descuento</p>
 								<span>
@@ -146,17 +153,17 @@
 									<ion-icon name="star"></ion-icon>
 								</span>
 								<hr>
-								<a href="#" class="btn btn-primary">Agregar al carrito</a>
+								<a class="btn btn-primary" href="#" onclick="MostrarModal('callofduty', 'Call of Duty', 'Treyarch', '599.99')">Agregar al carrito</a>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-3">
 						<div class="card">
-							<img class="card-img-top" src="IMG/flash/flash2.jpg" alt="Card image cap">
+							<img class="card-img-top" src="IMG/apexlegends/apexlegends2.jpg" alt="Apex Legends">
 							<div class="card-body">
-								<h5 class="card-title">Watch Dogs</h5>
+								<h5 class="card-title">Apex Legends</h5>
 								<hr>
-								<small class="card-text">by Ubisoft</small>
+								<small class="card-text">by Respawn Entertainment</small>
 								<h4 class="card-text PrecioArticulo" id="PrecioArticulo">Q. 599.99</h4>
 								<p class="card-text">5% de descuento</p>
 								<span>
@@ -167,17 +174,17 @@
 									<ion-icon name="star"></ion-icon>
 								</span>
 								<hr>
-								<a href="#" class="btn btn-primary">Agregar al carrito</a>
+								<a class="btn btn-primary" href="#" onclick="MostrarModal('apexlegends', 'Apex Legends', 'Respawn Entertainment', '599.99')">Agregar al carrito</a>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-3">
 						<div class="card">
-							<img class="card-img-top" src="IMG/arrow/arrow2.jpg" alt="Card image cap">
+							<img class="card-img-top" src="IMG/gearsofwar4/gearsofwar42.jpg" alt="Gear of Wars">
 							<div class="card-body">
-								<h5 class="card-title">Watch Dogs</h5>
+								<h5 class="card-title">Gear of Wars</h5>
 								<hr>
-								<small class="card-text">by Ubisoft</small>
+								<small class="card-text">by Epic Games</small>
 								<h4 class="card-text PrecioArticulo" id="PrecioArticulo">Q. 599.99</h4>
 								<p class="card-text">5% de descuento</p>
 								<span>
@@ -188,109 +195,21 @@
 									<ion-icon name="star"></ion-icon>
 								</span>
 								<hr>
-								<a href="#" class="btn btn-primary">Agregar al carrito</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section id="Grupo2 GrupoCartas"  class="Grupo2 GrupoCartas">
-				<div class="row">
-					<div class="col-lg-3">
-						<div class="card">
-							<img class="card-img-top" src="IMG/arrow/arrow2.jpg" alt="Card image cap">
-							<div class="card-body">
-								<h5 class="card-title">Watch Dogs</h5>
-								<hr>
-								<small class="card-text">by Ubisoft</small>
-								<h4 class="card-text PrecioArticulo" id="PrecioArticulo">Q. 599.99</h4>
-								<p class="card-text">5% de descuento</p>
-								<span>
-									<ion-icon name="star"></ion-icon>
-									<ion-icon name="star"></ion-icon>
-									<ion-icon name="star"></ion-icon>
-									<ion-icon name="star"></ion-icon>
-									<ion-icon name="star"></ion-icon>
-								</span>
-								<hr>
-								<a href="#" class="btn btn-primary">Agregar al carrito</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3">
-						<div class="card">
-							<img class="card-img-top" src="IMG/daredevil/daredevil2.jpg" alt="Card image cap">
-							<div class="card-body">
-								<h5 class="card-title">Watch Dogs</h5>
-								<hr>
-								<small class="card-text">by Ubisoft</small>
-								<h4 class="card-text PrecioArticulo" id="PrecioArticulo">Q. 599.99</h4>
-								<p class="card-text">5% de descuento</p>
-								<span>
-									<ion-icon name="star"></ion-icon>
-									<ion-icon name="star"></ion-icon>
-									<ion-icon name="star"></ion-icon>
-									<ion-icon name="star"></ion-icon>
-									<ion-icon name="star"></ion-icon>
-								</span>
-								<hr>
-								<a href="#" class="btn btn-primary">Agregar al carrito</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3">
-						<div class="card">
-							<img class="card-img-top" src="IMG/flash/flash2.jpg" alt="Card image cap">
-							<div class="card-body">
-								<h5 class="card-title">Watch Dogs</h5>
-								<hr>
-								<small class="card-text">by Ubisoft</small>
-								<h4 class="card-text PrecioArticulo" id="PrecioArticulo">Q. 599.99</h4>
-								<p class="card-text">5% de descuento</p>
-								<span>
-									<ion-icon name="star"></ion-icon>
-									<ion-icon name="star"></ion-icon>
-									<ion-icon name="star"></ion-icon>
-									<ion-icon name="star"></ion-icon>
-									<ion-icon name="star"></ion-icon>
-								</span>
-								<hr>
-								<a href="#" class="btn btn-primary">Agregar al carrito</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3">
-						<div class="card">
-							<img class="card-img-top" src="IMG/arrow/arrow2.jpg" alt="Card image cap">
-							<div class="card-body">
-								<h5 class="card-title">Watch Dogs</h5>
-								<hr>
-								<small class="card-text">by Ubisoft</small>
-								<h4 class="card-text PrecioArticulo" id="PrecioArticulo">Q. 599.99</h4>
-								<p class="card-text">5% de descuento</p>
-								<span>
-									<ion-icon name="star"></ion-icon>
-									<ion-icon name="star"></ion-icon>
-									<ion-icon name="star"></ion-icon>
-									<ion-icon name="star"></ion-icon>
-									<ion-icon name="star"></ion-icon>
-								</span>
-								<hr>
-								<a href="#" class="btn btn-primary">Agregar al carrito</a>
+								<a class="btn btn-primary" href="#" onclick="MostrarModal('gearsofwar4', 'Gear of Wars', 'Epic Games', '599.99')">Agregar al carrito</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section id="Grupo3 GrupoCartas"  class="Grupo3 GrupoCartas">
+			<section id="Grupo2 GrupoCartas" class="Grupo2 GrupoCartas">
 				<div class="row">
 					<div class="col-lg-3">
 						<div class="card">
-							<img class="card-img-top" src="IMG/arrow/arrow2.jpg" alt="Card image cap">
+							<img class="card-img-top" src="IMG/destiny/destiny2.jpg" alt="Destiny">
 							<div class="card-body">
-								<h5 class="card-title">Watch Dogs</h5>
+								<h5 class="card-title">Destiny</h5>
 								<hr>
-								<small class="card-text">by Ubisoft</small>
+								<small class="card-text">by Bungie Studios</small>
 								<h4 class="card-text PrecioArticulo" id="PrecioArticulo">Q. 599.99</h4>
 								<p class="card-text">5% de descuento</p>
 								<span>
@@ -301,17 +220,17 @@
 									<ion-icon name="star"></ion-icon>
 								</span>
 								<hr>
-								<a href="#" class="btn btn-primary">Agregar al carrito</a>
+								<a class="btn btn-primary" href="#" onclick="MostrarModal('destiny', 'Destiny', 'Bungie Studios', '599.99')">Agregar al carrito</a>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-3">
 						<div class="card">
-							<img class="card-img-top" src="IMG/daredevil/daredevil2.jpg" alt="Card image cap">
+							<img class="card-img-top" src="IMG/halo/halo2.jpg" alt="Halo">
 							<div class="card-body">
-								<h5 class="card-title">Watch Dogs</h5>
+								<h5 class="card-title">Halo</h5>
 								<hr>
-								<small class="card-text">by Ubisoft</small>
+								<small class="card-text">by 343 Industries</small>
 								<h4 class="card-text PrecioArticulo" id="PrecioArticulo">Q. 599.99</h4>
 								<p class="card-text">5% de descuento</p>
 								<span>
@@ -322,17 +241,17 @@
 									<ion-icon name="star"></ion-icon>
 								</span>
 								<hr>
-								<a href="#" class="btn btn-primary">Agregar al carrito</a>
+								<a class="btn btn-primary" href="#" onclick="MostrarModal('halo', 'Halo', '343 Industries', '599.99')">Agregar al carrito</a>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-3">
 						<div class="card">
-							<img class="card-img-top" src="IMG/flash/flash2.jpg" alt="Card image cap">
+							<img class="card-img-top" src="IMG/mortalkombat/mortalkombat2.jpg" alt="Mortal Kombat">
 							<div class="card-body">
-								<h5 class="card-title">Watch Dogs</h5>
+								<h5 class="card-title">Mortal Kombat</h5>
 								<hr>
-								<small class="card-text">by Ubisoft</small>
+								<small class="card-text">by NetherRealm Studios</small>
 								<h4 class="card-text PrecioArticulo" id="PrecioArticulo">Q. 599.99</h4>
 								<p class="card-text">5% de descuento</p>
 								<span>
@@ -343,17 +262,17 @@
 									<ion-icon name="star"></ion-icon>
 								</span>
 								<hr>
-								<a href="#" class="btn btn-primary">Agregar al carrito</a>
+								<a class="btn btn-primary" href="#" onclick="MostrarModal('mortalkombat', 'Mortal Kombat', 'Bungie Studios', '599.99')">Agregar al carrito</a>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-3">
 						<div class="card">
-							<img class="card-img-top" src="IMG/arrow/arrow2.jpg" alt="Card image cap">
+							<img class="card-img-top" src="IMG/darksoulsiii/darksoulsiii2.jpg" alt="Dark Souls 3">
 							<div class="card-body">
-								<h5 class="card-title">Watch Dogs</h5>
+								<h5 class="card-title">Dark Souls 3</h5>
 								<hr>
-								<small class="card-text">by Ubisoft</small>
+								<small class="card-text">by FromSoftware</small>
 								<h4 class="card-text PrecioArticulo" id="PrecioArticulo">Q. 599.99</h4>
 								<p class="card-text">5% de descuento</p>
 								<span>
@@ -364,21 +283,109 @@
 									<ion-icon name="star"></ion-icon>
 								</span>
 								<hr>
-								<a href="#" class="btn btn-primary">Agregar al carrito</a>
+								<a class="btn btn-primary" href="#" onclick="MostrarModal('darksoulsiii', 'Dark Souls 3', 'FromSoftware', '599.99')">Agregar al carrito</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section id="Grupo4 GrupoCartas"  class="Grupo4 GrupoCartas">
+			<section id="Grupo3 GrupoCartas" class="Grupo3 GrupoCartas">
 				<div class="row">
 					<div class="col-lg-3">
 						<div class="card">
-							<img class="card-img-top" src="IMG/arrow/arrow2.jpg" alt="Card image cap">
+							<img class="card-img-top" src="IMG/needforspeedplayback/needforspeedplayback2.jpg" alt="Need for Speed Playback">
 							<div class="card-body">
-								<h5 class="card-title">Watch Dogs</h5>
+								<h5 class="card-title">Need for Speed Playback</h5>
 								<hr>
-								<small class="card-text">by Ubisoft</small>
+								<small class="card-text">by Ghost Games</small>
+								<h4 class="card-text PrecioArticulo" id="PrecioArticulo">Q. 599.99</h4>
+								<p class="card-text">5% de descuento</p>
+								<span>
+									<ion-icon name="star"></ion-icon>
+									<ion-icon name="star"></ion-icon>
+									<ion-icon name="star"></ion-icon>
+									<ion-icon name="star"></ion-icon>
+									<ion-icon name="star"></ion-icon>
+								</span>
+								<hr>
+								<a class="btn btn-primary" href="#" onclick="MostrarModal('needforspeedplayback', 'Need for Speed Playback', 'Ghost Games', '599.99')">Agregar al carrito</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="card">
+							<img class="card-img-top" src="IMG/pes2019/pes20192.jpg" alt="PES 2019">
+							<div class="card-body">
+								<h5 class="card-title">PES 2019</h5>
+								<hr>
+								<small class="card-text">by Konami</small>
+								<h4 class="card-text PrecioArticulo" id="PrecioArticulo">Q. 599.99</h4>
+								<p class="card-text">5% de descuento</p>
+								<span>
+									<ion-icon name="star"></ion-icon>
+									<ion-icon name="star"></ion-icon>
+									<ion-icon name="star"></ion-icon>
+									<ion-icon name="star"></ion-icon>
+									<ion-icon name="star"></ion-icon>
+								</span>
+								<hr>
+								<a class="btn btn-primary" href="#" onclick="MostrarModal('pes2019', 'PES 2019', 'Konami', '599.99')">Agregar al carrito</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="card">
+							<img class="card-img-top" src="IMG/fornite/fornite2.jpg" alt="Fornite">
+							<div class="card-body">
+								<h5 class="card-title">Fornite</h5>
+								<hr>
+								<small class="card-text">by Epic Games</small>
+								<h4 class="card-text PrecioArticulo" id="PrecioArticulo">Q. 599.99</h4>
+								<p class="card-text">5% de descuento</p>
+								<span>
+									<ion-icon name="star"></ion-icon>
+									<ion-icon name="star"></ion-icon>
+									<ion-icon name="star"></ion-icon>
+									<ion-icon name="star"></ion-icon>
+									<ion-icon name="star"></ion-icon>
+								</span>
+								<hr>
+								<a class="btn btn-primary" href="#" onclick="MostrarModal('fornite', 'Fornite', 'Epic Games', '599.99')">Agregar al carrito</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="card">
+							<img class="card-img-top" src="IMG/minecraft/minecraft2.jpg" alt="Minecraft">
+							<div class="card-body">
+								<h5 class="card-title">Minecraft</h5>
+								<hr>
+								<small class="card-text">by Mojang AB</small>
+								<h4 class="card-text PrecioArticulo" id="PrecioArticulo">Q. 599.99</h4>
+								<p class="card-text">5% de descuento</p>
+								<span>
+									<ion-icon name="star"></ion-icon>
+									<ion-icon name="star"></ion-icon>
+									<ion-icon name="star"></ion-icon>
+									<ion-icon name="star"></ion-icon>
+									<ion-icon name="star"></ion-icon>
+								</span>
+								<hr>
+								<a class="btn btn-primary" href="#" onclick="MostrarModal('minecraft', 'Minecraft', 'Mojang AB', '599.99')">Agregar al carrito</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="Grupo4 GrupoCartas" class="Grupo4 GrupoCartas">
+				<div class="row">
+					<div class="col-lg-3">
+						<div class="card">
+							<img class="card-img-top" src="IMG/residentevil/residentevil2.jpg" alt="Resident Evil 7">
+							<div class="card-body">
+								<h5 class="card-title">Resident Evil 7</h5>
+								<hr>
+								<small class="card-text">by Capcom</small>
 								<h4 class="card-text PrecioArticulo" id="PrecioArticulo">Q. 599.99</h4>
 								<p class="card-text">5% de grupo4</p>
 								<span>
@@ -389,15 +396,36 @@
 									<ion-icon name="star"></ion-icon>
 								</span>
 								<hr>
-								<a href="#" class="btn btn-primary">Agregar al carrito</a>
+								<a class="btn btn-primary" href="#" onclick="MostrarModal('residentevil', 'Resident Evil 7', 'Capcom', '599.99')">Agregar al carrito</a>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-3">
 						<div class="card">
-							<img class="card-img-top" src="IMG/daredevil/daredevil2.jpg" alt="Card image cap">
+							<img class="card-img-top" src="IMG/battlefield4/battlefield42.jpg" alt="Battlefield">
 							<div class="card-body">
-								<h5 class="card-title">Watch Dogs</h5>
+								<h5 class="card-title">Battlefield</h5>
+								<hr>
+								<small class="card-text">by Electronic Arts</small>
+								<h4 class="card-text PrecioArticulo" id="PrecioArticulo">Q. 599.99</h4>
+								<p class="card-text">5% de descuento</p>
+								<span>
+									<ion-icon name="star"></ion-icon>
+									<ion-icon name="star"></ion-icon>
+									<ion-icon name="star"></ion-icon>
+									<ion-icon name="star"></ion-icon>
+									<ion-icon name="star"></ion-icon>
+								</span>
+								<hr>
+								<a class="btn btn-primary" href="#" onclick="MostrarModal('battlefield4', 'Battlefield', 'Electronic Arts', '599.99')">Agregar al carrito</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="card">
+							<img class="card-img-top" src="IMG/callofdutyghost/callofdutyghost2.jpg" alt="Card image cap">
+							<div class="card-body">
+								<h5 class="card-title">Call of Duty Ghost</h5>
 								<hr>
 								<small class="card-text">by Ubisoft</small>
 								<h4 class="card-text PrecioArticulo" id="PrecioArticulo">Q. 599.99</h4>
@@ -410,17 +438,17 @@
 									<ion-icon name="star"></ion-icon>
 								</span>
 								<hr>
-								<a href="#" class="btn btn-primary">Agregar al carrito</a>
+								<a class="btn btn-primary" href="#" onclick="MostrarModal('callofdutyghost', 'Call of Duty Ghost', 'Activision', '599.99')">Agregar al carrito</a>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-3">
 						<div class="card">
-							<img class="card-img-top" src="IMG/flash/flash2.jpg" alt="Card image cap">
+							<img class="card-img-top" src="IMG/fifa2019/fifa20192.jpg" alt="FIFA 2019">
 							<div class="card-body">
-								<h5 class="card-title">Watch Dogs</h5>
+								<h5 class="card-title">FIFA 2019</h5>
 								<hr>
-								<small class="card-text">by Ubisoft</small>
+								<small class="card-text">by Electronic Arts.</small>
 								<h4 class="card-text PrecioArticulo" id="PrecioArticulo">Q. 599.99</h4>
 								<p class="card-text">5% de descuento</p>
 								<span>
@@ -431,28 +459,7 @@
 									<ion-icon name="star"></ion-icon>
 								</span>
 								<hr>
-								<a href="#" class="btn btn-primary">Agregar al carrito</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3">
-						<div class="card">
-							<img class="card-img-top" src="IMG/arrow/arrow2.jpg" alt="Card image cap">
-							<div class="card-body">
-								<h5 class="card-title">Watch Dogs</h5>
-								<hr>
-								<small class="card-text">by Ubisoft</small>
-								<h4 class="card-text PrecioArticulo" id="PrecioArticulo">Q. 599.99</h4>
-								<p class="card-text">5% de descuento</p>
-								<span>
-									<ion-icon name="star"></ion-icon>
-									<ion-icon name="star"></ion-icon>
-									<ion-icon name="star"></ion-icon>
-									<ion-icon name="star"></ion-icon>
-									<ion-icon name="star"></ion-icon>
-								</span>
-								<hr>
-								<a href="#" class="btn btn-primary">Agregar al carrito</a>
+								<a class="btn btn-primary" href="#" onclick="MostrarModal('fifa2019', 'FIFA 2019', 'Electronic Arts', '599.99')">Agregar al carrito</a>
 							</div>
 						</div>
 					</div>
@@ -528,10 +535,16 @@
 		</section>
 	</div>
 	<section class="Modales">
-		<!-- Iniciar sesión -->
-		<div class="modal fade" id="AgregarCarrito" tabindex="-1" role="dialog" aria-labelledby="AgregarAlCarrito" aria-hidden="true">
+		<!-- Agregar a carrito -->
+		<div class="modal" tabindex="-1" id="AgregarCarrito" aria-labelledby="AgregarAlCarrito" role="dialog">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Agregar al carrito</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
 					<div class="row">
 						<div class="col-lg-5">
 							<div class="modal-body">
@@ -540,12 +553,15 @@
 						</div>
 						<div class="col-lg-7">
 							<div class="titulo">
-								<form>
-									<div class="card">
-										<div class="card-body">
-											<h5 class="card-title TituloArticulo" id="TituloArticulo"></h5>
+								<div class="modal-body">
+									<div class="card ArticuloComprar" id="ArticuloComprar">
+										<div class="card-body DatosCarrito">
+											<h5 class="card-title TituloArticulo"></h5>
 											<hr>
-											<small class="card-text CasaComercial"></small>
+											<h7 class="card-text CasaComercial"></h7>
+											<span>
+												<p class="card-text">5% de descuento</p>
+											</span>
 											<span>
 												<ion-icon name="star"></ion-icon>
 												<ion-icon name="star"></ion-icon>
@@ -554,15 +570,66 @@
 												<ion-icon name="star"></ion-icon>
 											</span>
 											<h4 class="card-text PrecioArt" id="PrecioArt"></h4>
-											<p class="card-text">Cantidad</p>
-											<input type="number" class="form-control" id="Cantidad" name="Cantidad" placeholder="Cantidad" required>
-											<hr>
-											<a href="#" class="btn btn-primary">Agregar al carrito</a>
 										</div>
 									</div>
-								</form>
+								</div>
 							</div>
 						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" id="Agregar" onclick="crear(this)">Agregar al carrito</button>
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Ver carrito -->
+		<div class="modal" tabindex="-1" id="VerCarrito" aria-labelledby="VerCarrito" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Carrito de compra</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="ListaArticulos">
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col">#</th>
+									<th scope="col">Artículo</th>
+									<th scope="col">Descripción</th>
+									<th scope="col">Precio</th>
+								</tr>
+							</thead>
+							<tbody id="CuerpoTabla">
+								<tr>
+
+									<th scope="row">1</th>
+									<td>
+										<div class="input-group input-group-lg">
+											<span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-asterisk"></i></span>
+											<select class="form-control" name="Equipo1" id="Equipo1" required>
+												<!-- Acá mostraremos los equipos que existen en la base de datos -->
+												<script type="text/javascript">
+													ObtenerDatos('Equipos');
+												</script>
+											</select>
+										</div>
+									</td>
+									<td>
+										<div class="input-group input-group-lg">
+											<span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-question-sign"></i></span>
+											<input type="number" class="form-control" name="CantidadHorasEquipo1" placeholder="Horas" id="CantidadHorasEquipo1" aria-describedby="sizing-addon1" required>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
 					</div>
 				</div>
 			</div>
