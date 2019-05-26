@@ -37,7 +37,10 @@ function MostrarArticulos(Grupo) {
 			$('.Grupo3').hide();
 			$('.Grupo4').hide();
 			$('.Botonera').show();
+			$('.Grupo5').hide();
 			$('.QuienesSomos').hide();
+			$('.Contacto').hide();
+			$('.Ubicacion').hide();
 			break;
 		}
 		case 'Grupo2':{
@@ -45,6 +48,10 @@ function MostrarArticulos(Grupo) {
 			$('.Grupo2').show();
 			$('.Grupo3').hide();
 			$('.Grupo4').hide();
+			$('.Grupo5').hide();
+			$('.QuienesSomos').hide();
+			$('.Contacto').hide();
+			$('.Ubicacion').hide();
 			break;
 		}
 		case 'Grupo3':{
@@ -52,6 +59,10 @@ function MostrarArticulos(Grupo) {
 			$('.Grupo2').hide();
 			$('.Grupo3').show();
 			$('.Grupo4').hide();
+			$('.Grupo5').hide();
+			$('.QuienesSomos').hide();
+			$('.Contacto').hide();
+			$('.Ubicacion').hide();
 			break;
 		}
 		case 'Grupo4':{
@@ -59,6 +70,21 @@ function MostrarArticulos(Grupo) {
 			$('.Grupo2').hide();
 			$('.Grupo3').hide();
 			$('.Grupo4').show();
+			$('.Grupo5').hide();
+			$('.QuienesSomos').hide();
+			$('.Contacto').hide();
+			$('.Ubicacion').hide();
+			break;
+		}
+		case 'Grupo5':{
+			$('.Grupo1').hide();
+			$('.Grupo2').hide();
+			$('.Grupo3').hide();
+			$('.Grupo4').hide();
+			$('.Grupo5').show();
+			$('.QuienesSomos').hide();
+			$('.Contacto').hide();
+			$('.Ubicacion').hide();
 			break;
 		}
 		case 'QuienesSomos':{
@@ -66,6 +92,7 @@ function MostrarArticulos(Grupo) {
 			$('.Grupo2').hide();
 			$('.Grupo3').hide();
 			$('.Grupo4').hide();
+			$('.Grupo5').hide();
 			$('.Botonera').hide();
 			$('.QuienesSomos').show();
 			$('.Contacto').hide();
@@ -77,6 +104,7 @@ function MostrarArticulos(Grupo) {
 			$('.Grupo2').hide();
 			$('.Grupo3').hide();
 			$('.Grupo4').hide();
+			$('.Grupo5').hide();
 			$('.Botonera').hide();
 			$('.QuienesSomos').hide();
 			$('.Contacto').show();
@@ -88,6 +116,7 @@ function MostrarArticulos(Grupo) {
 			$('.Grupo2').hide();
 			$('.Grupo3').hide();
 			$('.Grupo4').hide();
+			$('.Grupo5').hide();
 			$('.Botonera').hide();
 			$('.QuienesSomos').hide();
 			$('.Contacto').hide();
@@ -99,6 +128,7 @@ function MostrarArticulos(Grupo) {
 			$('.Grupo2').show();
 			$('.Grupo3').show();
 			$('.Grupo4').show();
+			$('.Grupo5').show();
 			$('.Botonera').hide();
 			$('.QuienesSomos').hide();
 			$('.Contacto').hide();

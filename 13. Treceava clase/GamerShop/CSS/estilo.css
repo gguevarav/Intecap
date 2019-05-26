@@ -2,11 +2,12 @@
 	margin-top: 25px;
 }
 
-.Grupo2, .Grupo3, .Grupo4, .QuienesSomos, .Contacto, .Ubicacion{
+.Grupo2, .Grupo3, .Grupo4, .Grupo5, .QuienesSomos, .Contacto, .Ubicacion{
 	display:none;
 }
 
 .ir-arriba{
+	z-index: 2;
 	padding: 10px;	
 	font-size: 30px;
 	color: #fff;
