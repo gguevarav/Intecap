@@ -142,7 +142,7 @@ function MostrarArticulos(Grupo) {
 function MostrarModal(Articulo, Titulo, CasaComercial, Precio) {
 	// Cambiamos valores a objetos
 	// Cambiamos la imagen
-	$(".ImagenVistaPrevia").attr("src","IMG/" + Articulo + "/" + Articulo +"2.jpg");
+	$(".ImagenVistaPreviaArticulo").attr("src","IMG/" + Articulo + "/" + Articulo +"2.jpg");
 	// Cambiamos el título
 	$('.TituloArticulo').text(Titulo);
 	// Cambiamos la casa comercial
@@ -153,10 +153,10 @@ function MostrarModal(Articulo, Titulo, CasaComercial, Precio) {
 	$("#AgregarCarrito").modal("show");
 }
 
-$("#Agregar").click(function() {
+/*$("#Agregar").click(function() {
 
 	$("#ArticuloComprar").clone().appendTo("#CarritoCompra");
-});
+});*/
 
 ContadorNumeroFila = 0;
 function crear(obj) {
@@ -172,52 +172,36 @@ function crear(obj) {
     NumeroFila.innerHTML = ContadorNumeroFila;
     // Creamos la primer columna de la fila
     ColumnaFila1 = document.createElement('td');
-    DivInputGroup = document.createElement('div');
-    DivInputGroup.className = 'input-group input-group-lg';
-    SpanSizing = document.createElement('span');
-    SpanSizing.id = 'sizing-addon1';
-    SpanSizing.className = 'input-group-addon';
-    Icono = document.createElement('i');
-    Icono.className = 'glyphicon glyphicon-asterisk';
-    NombreArticulo = document.createElement('p');
-    //$('#TituloArticulo h5').clone().append(NombreArticulo);
-    // SelectProducto = document.createElement('select');
-    NombreArticulo.id = 'TituloArticulo' + ContadorNumeroFila;
-    NombreArticulo.className = 'card-title TituloArticulo';
-    NombreArticulo.name = 'TituloArticulo' + ContadorNumeroFila;
-    NombreArticulo.innerHTML = document.getElementById('TituloArticulo').val();
-    
-    //$('#Equipo1 option').clone().appendTo(SelectProducto);
-    // Para el select
-    //SpanSizing.appendChild(Icono);
-    //DivInputGroup.appendChild(SpanSizing);
-    DivInputGroup.appendChild(NombreArticulo);
-    ColumnaFila1.appendChild(DivInputGroup);
-    
-    // Creamos la tercer columna
-    ColumnaFila3 = document.createElement('td');
-    DivInputGroup3 = document.createElement('div');
-    DivInputGroup3.className = 'input-group input-group-lg';
-    SpanSizing3 = document.createElement('span');
-    SpanSizing3.id = 'sizing-addon1';
-    SpanSizing3.className = 'input-group-addon';
-    Icono3 = document.createElement('i');
-    Icono3.className = 'glyphicon glyphicon-question-sign';
-    InputHoras = document.createElement('input');
-    InputHoras.id = 'CantidadHorasEquipo' + ContadorNumeroFila;
-    InputHoras.className = 'form-control';
-    InputHoras.name = 'CantidadHorasEquipo' + ContadorNumeroFila;
-    InputHoras.placeholder = 'Horas';
-    InputHoras.type = 'number';
-    SpanSizing3.appendChild(Icono3);
-    DivInputGroup3.appendChild(SpanSizing3);
-    DivInputGroup3.appendChild(InputHoras);
-    ColumnaFila3.appendChild(DivInputGroup3);
-    FilaTabla.appendChild(NumeroFila);
-    // Agregamos las dos columnas a la fila
-    FilaTabla.appendChild(ColumnaFila1);
 
+    imagen = document.createElement("img");
+    imagen.setAttribute("src", $('#ImagenVistaPreviaArticulo').attr('src'));
+    imagen.setAttribute("height", "50px")
+
+    ColumnaFila1.appendChild(imagen);
+
+    // Creamos la segunda columna
+    ColumnaFila2 = document.createElement('td');
+    titulo = document.createElement("h5");
+    titulo.setAttribute("class", "card-title");
+    titulo.innerHTML = $('#TituloArticulo').text();
+
+    ColumnaFila2.appendChild(titulo);
+
+    // Creamos la segunda columna
+    // Creamos la segunda columna
+    ColumnaFila3 = document.createElement('td');
+    precio = document.createElement("h4");
+    precio.setAttribute("class", "card-text");
+    precio.innerHTML = $('#PrecioArt').text();
+
+    ColumnaFila3.appendChild(precio);
+
+    FilaTabla.appendChild(NumeroFila);
+    FilaTabla.appendChild(ColumnaFila1);
+    FilaTabla.appendChild(ColumnaFila2);
     FilaTabla.appendChild(ColumnaFila3);
-    // Agregamos la fila al cuerpo de la tabla
     CuerpoTabla.appendChild(FilaTabla);
+
+    // Cerramos el modal
+    $('#AgregarCarrito').modal('hide');
 }

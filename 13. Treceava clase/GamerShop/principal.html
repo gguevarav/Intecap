@@ -638,7 +638,7 @@
 					<div class="row">
 						<div class="col-lg-5">
 							<div class="modal-body">
-								<img src="" class="img-fluid ImagenVistaPrevia">
+								<img src="" class="img-fluid ImagenVistaPreviaArticulo" id="ImagenVistaPreviaArticulo">
 							</div>
 						</div>
 						<div class="col-lg-7">
@@ -646,7 +646,7 @@
 								<div class="modal-body">
 									<div class="card ArticuloComprar" id="ArticuloComprar">
 										<div class="card-body DatosCarrito">
-											<h5 class="card-title TituloArticulo"></h5>
+											<h5 class="card-title TituloArticulo" id="TituloArticulo"></h5>
 											<hr>
 											<h7 class="card-text CasaComercial"></h7>
 											<span>
@@ -667,7 +667,7 @@
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-primary" id="Agregar" onclick="crear(this)">Agregar al carrito</button>
+						<button type="button" class="btn btn-primary" id="Agregar" onclick="crear()">Agregar al carrito</button>
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 					</div>
 				</div>
@@ -684,7 +684,7 @@
 						</button>
 					</div>
 					<div class="ListaArticulos">
-						<table class="table">
+						<table class="table TablaArticulos" id="TablaArticulos">
 							<thead>
 								<tr>
 									<th scope="col">#</th>
@@ -693,33 +693,25 @@
 									<th scope="col">Precio</th>
 								</tr>
 							</thead>
-							<tbody id="CuerpoTabla">
-								<tr>
-
+							<tbody class="CuerpoTabla" id="CuerpoTabla">
+								<!-- <tr>
 									<th scope="row">1</th>
 									<td>
-										<div class="input-group input-group-lg">
-											<span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-asterisk"></i></span>
-											<select class="form-control" name="Equipo1" id="Equipo1" required>
-												<!-- Acá mostraremos los equipos que existen en la base de datos -->
-												<script type="text/javascript">
-													ObtenerDatos('Equipos');
-												</script>
-											</select>
-										</div>
+										<img height="50px" src="IMG/callofdutyinfwar/callofdutyinfwar2.jpg" alt="Battlefield">	
 									</td>
 									<td>
-										<div class="input-group input-group-lg">
-											<span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-question-sign"></i></span>
-											<input type="number" class="form-control" name="CantidadHorasEquipo1" placeholder="Horas" id="CantidadHorasEquipo1" aria-describedby="sizing-addon1" required>
-										</div>
+										<h5 class="card-title">Call of Duty Infinite Warfare</h5>
+										
 									</td>
-								</tr>
+									<td>
+										<h4 class="card-text PrecioArticulo" id="PrecioArticulo">Q. 599.99</h4>
+									</td>
+								</tr> -->
 							</tbody>
 						</table>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+						<button type="button" class="btn btn-primary" data-dismiss="modal">Pagar</button>
 					</div>
 				</div>
 			</div>
